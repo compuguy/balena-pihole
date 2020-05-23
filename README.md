@@ -11,17 +11,17 @@ balenaCloud is a free service to remotely manage and update your Raspberry Pi th
 
 ## Getting Started
 
-To get started you'll first need to sign up for a free balenaCloud account and flash your device.
+You can one-click-deploy this project to balena using the button below:
 
-<https://www.balena.io/docs/learn/getting-started>
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
 
-## Deployment
+## Manual Deployment
 
-Once your account is set up, deployment is carried out by downloading the project and pushing it to your device either via Git or the balena CLI.
+Alternatively, deployment can be carried out by manually creating a [balenaCloud account](https://dashboard.balena-cloud.com) and application, flashing a device, downloading the project and pushing it via either Git or the [balena CLI](https://github.com/balena-io/balena-cli).
 
 ### Device Variables
 
-Device Variables apply to all services within the application, and can be applied fleet-wide to apply to multiple devices.
+Device Variables apply to all services within the application, and can be applied fleet-wide to apply to multiple devices. If you used the one-click-deploy method, the default environment variables will already be added for you to customize as needed.
 
 |Name|Example|Purpose|
 |---|---|---|
@@ -45,6 +45,10 @@ If you're having trouble getting the project running, submit an issue or post on
 ## Author
 
 Kyle Harding <https://klutchell.dev>
+
+[Buy me a beer](https://kyles-tip-jar.myshopify.com/cart/31356319498262:1?channel=buy_button)
+
+[Buy me a craft beer](https://kyles-tip-jar.myshopify.com/cart/31356317859862:1?channel=buy_button)
 
 ## Acknowledgments
 
