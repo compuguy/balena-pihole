@@ -34,7 +34,8 @@
 ## Example with both IPv4 and IPv6:
 ## listen_addresses = ['127.0.0.1:53', '[::1]:53']
 
-listen_addresses = ['0.0.0.0:5053']
+# listen_addresses = ['0.0.0.0:5053']
+listen_addresses = ['127.0.0.1:5053', '[::1]:5053']
 
 
 ## Maximum number of simultaneous client connections to accept
@@ -586,23 +587,24 @@ cache_neg_max_ttl = 600
   urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/public-resolvers.md', 'https://download.dnscrypt.info/resolvers-list/v2/public-resolvers.md']
   cache_file = 'public-resolvers.md'
   minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  prefix = ''
+  prefix = 'public-'
 
   ## Anonymized DNS relays
 
-  [sources.'relays']
-  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/relays.md', 'https://download.dnscrypt.info/resolvers-list/v2/relays.md']
-  cache_file = 'relays.md'
-  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  refresh_delay = 72
-  prefix = ''
+  # [sources.'relays']
+  # urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/relays.md', 'https://download.dnscrypt.info/resolvers-list/v2/relays.md']
+  # cache_file = 'relays.md'
+  # minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
+  # refresh_delay = 72
+  # prefix = 'relays-'
 
   ## Quad9 over DNSCrypt - https://quad9.net/
 
   [sources.quad9-resolvers]
   urls = ['https://www.quad9.net/quad9-resolvers.md']
-  minisign_key = 'RWQBphd2+f6eiAqBsvDZEBXBGHQBJfeG6G+wJPPKxCZMoEQYpmoysKUN'
+  minisign_key = "RWQBphd2+f6eiAqBsvDZEBXBGHQBJfeG6G+wJPPKxCZMoEQYpmoysKUN"
   cache_file = 'quad9-resolvers.md'
+  refresh_delay = 72
   prefix = 'quad9-'
 
   ## Another example source, with resolvers censoring some websites not appropriate for children
